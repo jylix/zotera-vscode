@@ -1,0 +1,62 @@
+{
+  "name": "fargo-vscode",
+  "displayName": "Fargo Explorer",
+  "description": "Install and manage your Fargo Marketplace Extensions",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onCommand:fargo-vscode.install",
+    "onView:fargo-vscode.fargo-vscode"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fargo-vscode.install",
+        "title": "Install Extensions",
+        "category": "Fargo"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "fargo-vscode",
+          "title": "Fargo Explorer",
+          "icon": "$(alert)"
+        }
+      ]
+    },
+    "views": {
+      "fargo-vscode": [
+        {
+          "type": "webview",
+          "id": "fargo-vscode",
+          "name": "Fargo Explorer",
+          "contextualTitle": "Fargo Explorer"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "watch": "concurrently \"pnpm run watch:ext\" \"pnpm run watch:webview\"",
+    "build": "concurrently \"pnpm run build:ext\" \"pnpm run build:webview\"",
+    "watch:ext": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --sourcemap --watch",
+    "build:ext": "esbuild ./src/extension.ts --bundle --outfile=dist/extension.js --external:vscode --format=cjs --platform=node --sourcemap",
+    "watch:webview": "pnpm --filter=webview run dev",
+    "build:webview": "pnpm --filter=webview run build",
+    "postinstall": "pnpm --filter=webview install"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/vscode": "1.67.0",
+    "concurrently": "^7.2.2",
+    "esbuild": "^0.14.48",
+    "typescript": "^4.7.4"
+  }
+}
