@@ -54,9 +54,13 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@luxass/eslint-config": "^1.0.2",
+    "@luxass/prettier-config": "^1.0.4",
     "@types/vscode": "1.67.0",
     "concurrently": "^7.2.2",
     "esbuild": "^0.14.48",
+    "eslint": "^8.19.0",
+    "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
 }

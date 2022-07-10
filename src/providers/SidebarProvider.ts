@@ -1,5 +1,6 @@
-import { TextDocument, Uri, Webview, WebviewView, WebviewViewProvider } from "vscode";
-import { getNonce, getUri } from "../utils";
+import { TextDocument, Uri, Webview, WebviewView, WebviewViewProvider } from 'vscode';
+
+import { getNonce, getUri } from '../utils';
 
 export class SidebarProvider implements WebviewViewProvider {
   _view?: WebviewView;
@@ -14,7 +15,7 @@ export class SidebarProvider implements WebviewViewProvider {
       // Allow scripts in the webview
       enableScripts: true,
 
-      localResourceRoots: [this._extensionUri],
+      localResourceRoots: [this._extensionUri]
     };
 
     webviewView.webview.html = this._getHtmlForWebview(webviewView.webview, this._extensionUri);
@@ -25,19 +26,9 @@ export class SidebarProvider implements WebviewViewProvider {
   }
 
   private _getHtmlForWebview(webview: Webview, extensionUri: Uri) {
-    const stylesUri = getUri(webview, extensionUri, [
-      "webview",
-      "build",
-      "assets",
-      "index.css",
-    ]);
+    const stylesUri = getUri(webview, extensionUri, ['webview', 'build', 'assets', 'index.css']);
 
-    const scriptUri = getUri(webview, extensionUri, [
-      "webview",
-      "build",
-      "assets",
-      "index.js",
-    ]);
+    const scriptUri = getUri(webview, extensionUri, ['webview', 'build', 'assets', 'index.js']);
 
     const nonce = getNonce();
     return /*html*/ `
@@ -49,7 +40,7 @@ export class SidebarProvider implements WebviewViewProvider {
           <link rel="stylesheet" type="text/css" href="${stylesUri}">
           <meta http-equiv="Content-Security-Policy" content="img-src https: data:; style-src 'unsafe-inline' ${webview.cspSource}; script-src 'nonce-${nonce}';">
           <script nonce="${nonce}">
-            const vscode = acquireVsCodeApi();  
+            const vscode = acquireVsCodeApi();
           </script>
         </head>
         <body>
