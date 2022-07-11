@@ -1,4 +1,4 @@
-import { TextDocument, Uri, Webview, WebviewView, WebviewViewProvider } from 'vscode';
+import type { TextDocument, Uri, Webview, WebviewView, WebviewViewProvider } from 'vscode';
 
 import { getNonce, getUri } from '../utils';
 
@@ -31,7 +31,7 @@ export class SidebarProvider implements WebviewViewProvider {
     const scriptUri = getUri(webview, extensionUri, ['webview', 'build', 'assets', 'index.js']);
 
     const nonce = getNonce();
-    return /*html*/ `
+    return /* html */ `
       <!DOCTYPE html>
       <html lang="en">
         <head>

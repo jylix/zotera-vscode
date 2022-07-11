@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { provideVSCodeDesignSystem, vsCodeTextField } from "@vscode/webview-ui-toolkit";
+import { provideVSCodeDesignSystem, vsCodeTextField } from '@vscode/webview-ui-toolkit';
 
 provideVSCodeDesignSystem().register(vsCodeTextField());
 
-function handleHowdyClick() {
-}
+function handleHowdyClick() {}
 </script>
 
 <template>

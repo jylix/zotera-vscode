@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@luxass/eslint-config': ^1.0.2
+  '@luxass/eslint-config': ^1.0.3
   '@luxass/prettier-config': ^1.0.4
   '@types/vscode': 1.67.0
   concurrently: ^7.2.2
@@ -11,7 +11,7 @@ specifiers:
   typescript: ^4.7.4
 
 devDependencies:
-  '@luxass/eslint-config': 1.0.2_4x5o4skxv6sl53vpwefgt23khm
+  '@luxass/eslint-config': 1.0.3_4x5o4skxv6sl53vpwefgt23khm
   '@luxass/prettier-config': 1.0.4_prettier@2.7.1
   '@types/vscode': 1.67.0
   concurrently: 7.2.2
@@ -312,8 +312,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@luxass/eslint-config/1.0.2_4x5o4skxv6sl53vpwefgt23khm:
-    resolution: {integrity: sha512-c5YBswQN/swccHiMm1p+md4V9KlZADlLB+pt0VvlgDhoHthTMM0SsLQ/2SnLpYAktRFDKBX2y811e0IoGNIVGg==}
+  /@luxass/eslint-config/1.0.3_4x5o4skxv6sl53vpwefgt23khm:
+    resolution: {integrity: sha512-QKtgykPpwkWpwowKAnruTsGaFmXoKQ8m817CDxuIrOhTA5JHugfkFTTHXiWExK7GFY7y5lvforN1h5dRnohA3g==}
     peerDependencies:
       eslint: ^8.16.0
     dependencies:

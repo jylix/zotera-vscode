@@ -1,4 +1,5 @@
-import { ExtensionContext, commands, window } from 'vscode';
+import { commands, window } from 'vscode';
+import type { ExtensionContext } from 'vscode';
 
 import { SidebarProvider } from './providers/SidebarProvider';
 

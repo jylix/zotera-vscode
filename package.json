@@ -1,7 +1,7 @@
 {
-  "name": "fargo-vscode",
-  "displayName": "Fargo Explorer",
-  "description": "Install and manage your Fargo Marketplace Extensions",
+  "name": "zotera-vscode",
+  "displayName": "Zotera Explorer",
+  "description": "Install and manage your Zotera Marketplace Extensions",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.67.0"
@@ -11,23 +11,23 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:fargo-vscode.install",
-    "onView:fargo-vscode.fargo-vscode"
+    "onCommand:zotera-vscode.install",
+    "onView:zotera-vscode.zotera-vscode"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "fargo-vscode.install",
+        "command": "zotera-vscode.install",
         "title": "Install Extensions",
-        "category": "Fargo"
+        "category": "Zotera"
       }
     ],
     "viewsContainers": {
       "activitybar": [
         {
-          "id": "fargo-vscode",
-          "title": "Fargo Explorer",
+          "id": "zotera-vscode",
+          "title": "Zotera Explorer",
           "icon": "$(alert)"
         }
       ]
@@ -36,9 +36,9 @@
       "fargo-vscode": [
         {
           "type": "webview",
-          "id": "fargo-vscode",
-          "name": "Fargo Explorer",
-          "contextualTitle": "Fargo Explorer"
+          "id": "zotera-vscode",
+          "name": "Zotera Explorer",
+          "contextualTitle": "Zotera Explorer"
         }
       ]
     }
@@ -54,7 +54,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@luxass/eslint-config": "^1.0.2",
+    "@luxass/eslint-config": "^1.0.3",
     "@luxass/prettier-config": "^1.0.4",
     "@types/vscode": "1.67.0",
     "concurrently": "^7.2.2",

@@ -1,4 +1,5 @@
-import { Uri, Webview } from 'vscode';
+import { Uri } from 'vscode';
+import type { Webview } from 'vscode';
 
 /**
  * Returns a random nonce
