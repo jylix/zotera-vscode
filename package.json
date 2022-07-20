@@ -33,7 +33,7 @@
       ]
     },
     "views": {
-      "fargo-vscode": [
+      "zotera-vscode": [
         {
           "type": "webview",
           "id": "zotera-vscode",
@@ -54,12 +54,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@luxass/eslint-config": "^1.0.3",
+    "@luxass/eslint-config": "^1.0.6",
     "@luxass/prettier-config": "^1.0.4",
     "@types/vscode": "1.67.0",
-    "concurrently": "^7.2.2",
-    "esbuild": "^0.14.48",
-    "eslint": "^8.19.0",
+    "concurrently": "^7.3.0",
+    "esbuild": "^0.14.49",
+    "eslint": "^8.20.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
